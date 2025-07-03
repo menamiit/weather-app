@@ -1,31 +1,33 @@
 import React, { useState, useEffect } from 'react'
 import WeatherCard from './components/weatherCard'
 import WeatherForm from './components/WeatherForm'
-import API_KEY from '../API_KEY.js'
 
 function App() {
   const [city, setCity] = useState("London");
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState("");
 
-  useEffect(()=> {
-      setError("");
-      setWeather(null);
+  useEffect(() => {
+    setError("");
+    setWeather(null);
 
-    const fetchWeather = async ()=> {
+    const fetchWeather = async () => {
       try {
-        const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`);
-        if(!res.ok) throw new Error ("City not found");
+        // OpenWeatherMap API endpoint
+        const res = await fetch(
+          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=bd5e378503939ddaee76f12ad7a97608&units=metric`
+        );
+        if (!res.ok) throw new Error("City not found");
         const data = await res.json();
         setWeather({
-          location: data.location.name,
-          description: data.current.condition.text,
-          temp_c: Math.round(data.current.temp_c),
-          temp_f: Math.round(data.current.temp_f),
-          date: data.location.localtime,
-          icon:data.current.condition.icon,
-        })
-      } catch(err) {
+          location: data.name,
+          description: data.weather[0].description,
+          temp_c: Math.round(data.main.temp),
+          temp_f: Math.round((data.main.temp * 9) / 5 + 32),
+          date: new Date(data.dt * 1000).toLocaleString(),
+          icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
+        });
+      } catch (err) {
         setError(err.message);
       }
     };
