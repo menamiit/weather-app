@@ -1,6 +1,6 @@
 # Weather App
 
-A rather simple and modern weather application built with React and [WeatherAPI](https://www.weatherapi.com/), showcasing various React concepts like hooks, API integration, and modular component structure.  
+A rather simple and modern weather application built with React and [OpenWeather](https://openweathermap.org/), showcasing various React concepts like hooks, API integration, and modular component structure.  
 Users can search for any city and view the current weather, temperature (toggle between °C and °F), description, and weather icon.
 
 ## Features
@@ -13,7 +13,8 @@ Users can search for any city and view the current weather, temperature (toggle 
 
 ## Screenshots
 
-![Weather App Screenshot](screenshot.png)
+![Weather App Screenshot](![image](https://github.com/user-attachments/assets/3decafa2-9834-40ec-a6a6-98650dc57028)
+)
 
 ## Project Structure
 
@@ -36,7 +37,7 @@ weather-app/
 ## Customization
 
 - **Styling:** Uses [Tailwind CSS](https://tailwindcss.com/) for easy customization.
-- **API:** Powered by [WeatherAPI](https://www.weatherapi.com/).
+- **API:** Powered by [WeatherAPI](https://openweathermap.org/).
 
 ## License
 
