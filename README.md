@@ -31,7 +31,6 @@ weather-app/
 ├── package.json
 ├── vite.config.js
 ├── README.md
-└── API_KEY.js (not committed)
 ```
 
 ## Customization
@@ -42,3 +41,6 @@ weather-app/
 ## License
 
 This project is licensed under the MIT License.
+
+## API Credits
+[Click here]('https://gist.github.com/lalithabacies/c8f973dc6754384d6cade282b64a8cb1')
