@@ -13,8 +13,7 @@ Users can search for any city and view the current weather, temperature (toggle 
 
 ## Try it yourself
 
-![Click]([https://github.com/user-attachments/assets/3decafa2-9834-40ec-a6a6-98650dc57028](https://menamiit.github.io/weather-app/)
-)
+[Click to visit](https://menamiit.github.io/weather-app/)
 
 ## Project Structure
 
